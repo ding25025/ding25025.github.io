@@ -7,6 +7,7 @@
 (function() {
   "use strict";
 
+
   /**
    * Easy selector helper function
    */
@@ -197,5 +198,12 @@
       mirror: false
     })
   });
+
+  /**
+   * Get Year
+   */
+  const d = new Date();
+  let year = d.getFullYear();
+  document.getElementById("getYear").innerHTML = year;
 
 })()
