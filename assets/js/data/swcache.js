@@ -47,8 +47,6 @@ const allowedDomains = [
   'localhost:4000',
 
   
-    'www.gravatar.com',
-  
 
   'fonts.gstatic.com',
   'fonts.googleapis.com',
