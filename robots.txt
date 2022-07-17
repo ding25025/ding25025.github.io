@@ -2,4 +2,8 @@ User-agent: *
 
 Disallow: /norobots/
 
+<<<<<<< HEAD
 Sitemap: http://localhost:4000/sitemap.xml
+=======
+Sitemap: /ding25025.github.io/sitemap.xml
+>>>>>>> 00696d9bb11b48db59d08e6bca4f91049582e474

@@ -2,7 +2,11 @@
   
   {
     "title": "Enable Google Page Views",
+<<<<<<< HEAD
     "url": "/posts/enable-google-pv/",
+=======
+    "url": "/ding25025.github.io/posts/enable-google-pv/",
+>>>>>>> 00696d9bb11b48db59d08e6bca4f91049582e474
     "categories": "Blogging, Tutorial",
     "tags": "google analytics, pageviews",
     "date": "2021-01-04 07:32:00 +0800",
@@ -17,7 +21,11 @@
   
   {
     "title": "Customize the Favicon",
+<<<<<<< HEAD
     "url": "/posts/customize-the-favicon/",
+=======
+    "url": "/ding25025.github.io/posts/customize-the-favicon/",
+>>>>>>> 00696d9bb11b48db59d08e6bca4f91049582e474
     "categories": "Blogging, Tutorial",
     "tags": "favicon",
     "date": "2019-08-11 00:34:00 +0800",
@@ -32,7 +40,11 @@
   
   {
     "title": "Getting Started",
+<<<<<<< HEAD
     "url": "/posts/getting-started/",
+=======
+    "url": "/ding25025.github.io/posts/getting-started/",
+>>>>>>> 00696d9bb11b48db59d08e6bca4f91049582e474
     "categories": "Blogging, Tutorial",
     "tags": "getting started",
     "date": "2019-08-09 20:55:00 +0800",
@@ -47,7 +59,11 @@
   
   {
     "title": "Writing a New Post",
+<<<<<<< HEAD
     "url": "/posts/write-a-new-post/",
+=======
+    "url": "/ding25025.github.io/posts/write-a-new-post/",
+>>>>>>> 00696d9bb11b48db59d08e6bca4f91049582e474
     "categories": "Blogging, Tutorial",
     "tags": "writing",
     "date": "2019-08-08 14:10:00 +0800",
@@ -62,7 +78,11 @@
   
   {
     "title": "Text and Typography",
+<<<<<<< HEAD
     "url": "/posts/text-and-typography/",
+=======
+    "url": "/ding25025.github.io/posts/text-and-typography/",
+>>>>>>> 00696d9bb11b48db59d08e6bca4f91049582e474
     "categories": "Blogging, Demo",
     "tags": "typography",
     "date": "2019-08-08 11:33:00 +0800",
