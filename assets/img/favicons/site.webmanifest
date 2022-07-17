@@ -6,28 +6,16 @@
   "description": "No matter how hard it is, you need to step by step and practice, until you got it.",
   "icons": [
     {
-<<<<<<< HEAD
       "src": "/assets/img/favicons/android-chrome-192x192.png",
-=======
-      "src": "/ding25025.github.io/assets/img/favicons/android-chrome-192x192.png",
->>>>>>> 00696d9bb11b48db59d08e6bca4f91049582e474
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-<<<<<<< HEAD
       "src": "/assets/img/favicons/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }],
   "start_url": "/index.html",
-=======
-      "src": "/ding25025.github.io/assets/img/favicons/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png"
-    }],
-  "start_url": "/ding25025.github.io/index.html",
->>>>>>> 00696d9bb11b48db59d08e6bca4f91049582e474
   "theme_color": "#2a1e6b",
   "background_color": "#ffffff",
   "display": "fullscreen"
