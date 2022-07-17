@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: http://localhost:4000/ding25025.github.io/sitemap.xml
