@@ -42,31 +42,25 @@
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Text and Typography" />
-<meta name="author" content="Cotes Chung" />
+<meta property="og:title" content="快速導入2FA驗證：使用Google Authentication" />
+<meta name="author" content="YuTing Wu" />
 <meta property="og:locale" content="zh_TW" />
-<meta name="description" content="This post is to show Markdown syntax rendering on Chirpy, you can also use it as an example of writing. Now, let’s start looking at text and typography." />
-<meta property="og:description" content="This post is to show Markdown syntax rendering on Chirpy, you can also use it as an example of writing. Now, let’s start looking at text and typography." />
-<link rel="canonical" href="http://localhost:4000/posts/text-and-typography/" />
-<meta property="og:url" content="http://localhost:4000/posts/text-and-typography/" />
+<meta name="description" content="Google Authentication 現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有導入這項服務。 這個範例是使用Google Authentication 實作，重點是完全免費。 過去時做這功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。 目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒： Time-based One-Time Password (TOTP) HMAC-Based One-time Password (HOTP) " />
+<meta property="og:description" content="Google Authentication 現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有導入這項服務。 這個範例是使用Google Authentication 實作，重點是完全免費。 過去時做這功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。 目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒： Time-based One-Time Password (TOTP) HMAC-Based One-time Password (HOTP) " />
+<link rel="canonical" href="http://localhost:4000/posts/google-2FA/" />
+<meta property="og:url" content="http://localhost:4000/posts/google-2FA/" />
 <meta property="og:site_name" content="YT BLOG" />
-<meta property="og:image" content="http://localhost:4000/commons/devices-mockup.png" />
-<meta property="og:image:height" content="500" />
-<meta property="og:image:width" content="800" />
-<meta property="og:image:alt" content="Responsive rendering of Chirpy theme on multiple devices." />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-08-08T11:33:00+08:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/commons/devices-mockup.png" />
-<meta name="twitter:image:alt" content="Responsive rendering of Chirpy theme on multiple devices." />
-<meta property="twitter:title" content="Text and Typography" />
+<meta property="article:published_time" content="2023-03-17T15:02:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="快速導入2FA驗證：使用Google Authentication" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Cotes Chung","url":"https://github.com/cotes2020/"},"dateModified":"2019-08-08T11:33:00+08:00","datePublished":"2019-08-08T11:33:00+08:00","description":"This post is to show Markdown syntax rendering on Chirpy, you can also use it as an example of writing. Now, let’s start looking at text and typography.","headline":"Text and Typography","image":{"width":800,"height":500,"alt":"Responsive rendering of Chirpy theme on multiple devices.","url":"http://localhost:4000/commons/devices-mockup.png","@type":"imageObject"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/text-and-typography/"},"url":"http://localhost:4000/posts/text-and-typography/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"YuTing Wu"},"dateModified":"2023-03-17T15:02:00+08:00","datePublished":"2023-03-17T15:02:00+08:00","description":"Google Authentication 現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有導入這項服務。 這個範例是使用Google Authentication 實作，重點是完全免費。 過去時做這功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。 目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒： Time-based One-Time Password (TOTP) HMAC-Based One-time Password (HOTP) ","headline":"快速導入2FA驗證：使用Google Authentication","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/google-2FA/"},"url":"http://localhost:4000/posts/google-2FA/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>Text and Typography | YT BLOG
+  <title>快速導入2FA驗證：使用Google Authentication | YT BLOG
   </title>
 
   <!--
@@ -413,7 +407,7 @@
         
 
           
-            <span>Text and Typography</span>
+            <span>快速導入2FA驗證：使用Google Authentication</span>
           
 
         
@@ -537,73 +531,8 @@
 
       
     
-      
-      
-        
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-        
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-        
 
     
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
       
 
       <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
@@ -656,404 +585,8 @@
 
       
     
-      
-      
-        
-      
-      
 
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-        
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-        
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-        
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-        
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-        
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-        
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-        
-
     
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-        
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-        
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
       
 
       <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
@@ -1122,162 +655,6 @@
       
 
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
 
     
 
@@ -1306,78 +683,6 @@
       
 
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
 
     
 
@@ -1385,41 +690,6 @@
 
   
   
-
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-
-    
 
   
 
@@ -1439,118 +709,13 @@
 
 
 
-  
-  
-
-  
-
-    
-      
-      
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-
-    
-
-    
-    
-
-    
-
-  
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-
-    
-
-    
-    
-
-    
-
-  
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-
-    
-
-    
-    
-
-    
-
-  
-
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-
-    
-
-    
-    
-
-    
-
-  
-
-  
-
-
-
 <!-- return -->
 
 
 
 
 
-<h1 data-toc-skip>Text and Typography</h1>
+<h1 data-toc-skip>快速導入2FA驗證：使用Google Authentication</h1>
 
 <div class="post-meta text-muted">
     <!-- published date -->
@@ -1566,10 +731,10 @@
 
 
 <em class=""
-    data-ts="1565235180"
+    data-ts="1679036520"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
-  Aug  8, 2019
+  Mar 17, 2023
 </em>
 
     </span>
@@ -1577,26 +742,6 @@
     <!-- lastmod date -->
     
 
-  
-    
-
-    <div class="mt-3 mb-3">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3C/svg%3E" data-src="/commons/devices-mockup.png" class="preview-img bg"
-        alt="Responsive rendering of Chirpy theme on multiple devices."
-
-      
-        width="800"
-      
-
-      
-        height="500"
-       data-proofer-ignore>
-
-      
-        <figcaption class="text-center pt-2 pb-2">Responsive rendering of Chirpy theme on multiple devices.</figcaption>
-      
-
-    </div>
   
 
   <div class="d-flex justify-content-between">
@@ -1611,7 +756,7 @@
 
       <em>
         
-          <a href="https://github.com/cotes2020/">Cotes Chung</a>
+        YU-TING,WU
         
       </em>
     </span>
@@ -1640,8 +785,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="635 words">
-  <em>3 min</em> read</span>
+  title="319 words">
+  <em>1 min</em> read</span>
 
     </div>
 
@@ -1650,281 +795,80 @@
 </div> <!-- .post-meta -->
 
 <div class="post-content">
-  <p>This post is to show Markdown syntax rendering on <a href="https://github.com/cotes2020/jekyll-theme-chirpy/fork"><strong>Chirpy</strong></a>, you can also use it as an example of writing. Now, let’s start looking at text and typography.</p>
-
-<h2 id="titles"><span class="mr-2">Titles</span><a href="#titles" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<hr />
-<h1 id="h1---heading">H1 - heading</h1>
-
-<h2 data-toc-skip="">H2 - heading</h2>
-
-<h3 data-toc-skip="">H3 - heading</h3>
-
-<h4>H4 - heading</h4>
-<hr />
-<p><br /></p>
-
-<h2 id="paragraph"><span class="mr-2">Paragraph</span><a href="#paragraph" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>I wandered lonely as a cloud</p>
-
-<p>That floats on high o’er vales and hills,</p>
-
-<p>When all at once I saw a crowd,</p>
-
-<p>A host, of golden daffodils;</p>
-
-<p>Beside the lake, beneath the trees,</p>
-
-<p>Fluttering and dancing in the breeze.</p>
-
-<h2 id="lists"><span class="mr-2">Lists</span><a href="#lists" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<h3 id="ordered-list"><span class="mr-2">Ordered list</span><a href="#ordered-list" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
+  <h2 id="google-authentication"><span class="mr-2">Google Authentication</span><a href="#google-authentication" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有導入這項服務。
+這個範例是使用Google Authentication 實作，重點是完全免費。
+過去時做這功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。
+目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒：</p>
 <ol>
-  <li>Firstly</li>
-  <li>Secondly</li>
-  <li>Thirdly</li>
+  <li>Time-based One-Time Password (TOTP)</li>
+  <li>HMAC-Based One-time Password (HOTP) </li>
 </ol>
 
-<h3 id="unordered-list"><span class="mr-2">Unordered list</span><a href="#unordered-list" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="使用python實作"><span class="mr-2">使用Python實作</span><a href="#使用python實作" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
-<ul>
-  <li>Chapter
-    <ul>
-      <li>Section
-        <ul>
-          <li>Paragraph</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="task-list"><span class="mr-2">Task list</span><a href="#task-list" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ul class="task-list">
-  <li class="task-list-item" hide-bullet><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />TODO</li>
-  <li class="task-list-item" hide-bullet><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Completed</li>
-  <li class="task-list-item" hide-bullet><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Defeat COVID-19
-    <ul class="task-list">
-      <li class="task-list-item" hide-bullet><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Vaccine production</li>
-      <li class="task-list-item" hide-bullet><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Economic recovery</li>
-      <li class="task-list-item" hide-bullet><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />People smile again</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="description-list"><span class="mr-2">Description list</span><a href="#description-list" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<dl>
-  <dt>Sun</dt>
-  <dd>the star around which the earth orbits</dd>
-  <dt>Moon</dt>
-  <dd>the natural satellite of the earth, visible by reflected light from the sun</dd>
-</dl>
-
-<h2 id="block-quote"><span class="mr-2">Block Quote</span><a href="#block-quote" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<blockquote>
-  <p>This line shows the <em>block quote</em>.</p>
-</blockquote>
-
-<h2 id="prompts"><span class="mr-2">Prompts</span><a href="#prompts" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<blockquote class="prompt-tip"><div>
-  <p>An example showing the <code class="language-plaintext highlighter-rouge">tip</code> type prompt.</p>
-</div></blockquote>
-
-<blockquote class="prompt-info"><div>
-  <p>An example showing the <code class="language-plaintext highlighter-rouge">info</code> type prompt.</p>
-</div></blockquote>
-
-<blockquote class="prompt-warning"><div>
-  <p>An example showing the <code class="language-plaintext highlighter-rouge">warning</code> type prompt.</p>
-</div></blockquote>
-
-<blockquote class="prompt-danger"><div>
-  <p>An example showing the <code class="language-plaintext highlighter-rouge">danger</code> type prompt.</p>
-</div></blockquote>
-
-<h2 id="tables"><span class="mr-2">Tables</span><a href="#tables" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Company</th>
-      <th style="text-align: left">Contact</th>
-      <th style="text-align: right">Country</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Alfreds Futterkiste</td>
-      <td style="text-align: left">Maria Anders</td>
-      <td style="text-align: right">Germany</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Island Trading</td>
-      <td style="text-align: left">Helen Bennett</td>
-      <td style="text-align: right">UK</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Magazzini Alimentari Riuniti</td>
-      <td style="text-align: left">Giovanni Rovelli</td>
-      <td style="text-align: right">Italy</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<h2 id="links"><span class="mr-2">Links</span><a href="#links" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p><a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a></p>
-
-<h2 id="footnote"><span class="mr-2">Footnote</span><a href="#footnote" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>Click the hook will locate the footnote<sup id="fnref:footnote" role="doc-noteref"><a href="#fn:footnote" class="footnote" rel="footnote">1</a></sup>, and here is another footnote<sup id="fnref:fn-nth-2" role="doc-noteref"><a href="#fn:fn-nth-2" class="footnote" rel="footnote">2</a></sup>.</p>
-
-<h2 id="images"><span class="mr-2">Images</span><a href="#images" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<ul>
-  <li>Default (with caption)</li>
-</ul>
-
-<p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 972 589'%3E%3C/svg%3E" data-src="/posts/20190808/mockup.png" alt="Desktop View" width="972" height="589" data-proofer-ignore>
-<em>Full screen width and center alignment</em></p>
-
-<p><br /></p>
-
-<ul>
-  <li>Shadow</li>
-</ul>
-
-<p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1548 864'%3E%3C/svg%3E" data-src="/posts/20190808/window.png" alt="Window shadow" class="shadow" width="1548" height="864" style="max-width: 90%" data-proofer-ignore>
-<em>shadow effect (visible in light mode)</em></p>
-
-<p><br /></p>
-
-<ul>
-  <li>Left aligned</li>
-</ul>
-
-<p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 972 589'%3E%3C/svg%3E" data-src="/posts/20190808/mockup.png" alt="Desktop View" width="972" height="589" style="max-width: 70%" class="normal" data-proofer-ignore></p>
-
-<p><br /></p>
-
-<ul>
-  <li>
-    <p>Float to left</p>
-
-    <p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 972 589'%3E%3C/svg%3E" data-src="/posts/20190808/mockup.png" alt="Desktop View" width="972" height="589" style="max-width: 200px" class="left" data-proofer-ignore>
-“A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space.”</p>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<ul>
-  <li>
-    <p>Float to right</p>
-
-    <p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 972 589'%3E%3C/svg%3E" data-src="/posts/20190808/mockup.png" alt="Desktop View" width="972" height="589" style="max-width: 200px" class="right" data-proofer-ignore>
-“A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space.”</p>
-  </li>
-</ul>
-
-<p><br /></p>
-
-<h2 id="mermaid-svg"><span class="mr-2">Mermaid SVG</span><a href="#mermaid-svg" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<pre><code class="language-mermaid"> gantt
-  title  Adding GANTT diagram functionality to mermaid
-  apple :a, 2017-07-20, 1w
-  banana :crit, b, 2017-07-23, 1d
-  cherry :active, c, after b a, 1d
-</code></pre>
-
-<h2 id="mathematics"><span class="mr-2">Mathematics</span><a href="#mathematics" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>The mathematics powered by <a href="https://www.mathjax.org/"><strong>MathJax</strong></a>:</p>
-
-\[\sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6}\]
-
-<p>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are</p>
-
-\[x = {-b \pm \sqrt{b^2-4ac} \over 2a}\]
-
-<h2 id="inline-code"><span class="mr-2">Inline code</span><a href="#inline-code" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>This is an example of <code class="language-plaintext highlighter-rouge">Inline Code</code>.</p>
-
-<h2 id="filepath"><span class="mr-2">Filepath</span><a href="#filepath" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<p>Here is the <code class="language-plaintext filepath highlighter-rouge">/path/to/the/file.extend</code>.</p>
-
-<h2 id="code-block"><span class="mr-2">Code block</span><a href="#code-block" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<h3 id="common"><span class="mr-2">Common</span><a href="#common" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>This is a common code snippet, without syntax highlight and line number.
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="specific-languages"><span class="mr-2">Specific Languages</span><a href="#specific-languages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<h4 id="console"><span class="mr-2">Console</span><a href="#console" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-
-<div class="language-console highlighter-rouge"><div class="code-header">
-        <span data-label-text="Console"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="gp">$</span><span class="w"> </span><span class="nb">env</span> |grep SHELL
-<span class="go">SHELL=/usr/local/bin/bash
-PYENV_SHELL=bash
-</span></pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="shell"><span class="mr-2">Shell</span><a href="#shell" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
-
-<div class="language-bash highlighter-rouge"><div class="code-header">
+<ol>
+  <li>首先，須先下載相關套件
+    <div class="language-shell highlighter-rouge"><div class="code-header">
         <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> pip <span class="nb">install </span>pyotp qrcode
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>建立一個名app 的Python 檔案：app.py ，寫入下列程式碼
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre><span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
-    </span><span class="nb">echo</span> <span class="s2">"The command was not successful."</span><span class="p">;</span>
-    <span class="c">#do the needful / exit</span>
-<span class="k">fi</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre>   <span class="kn">import</span> <span class="nn">pyotp</span>
+   <span class="kn">import</span> <span class="nn">qrcode</span>
 
-<h3 id="specific-filename"><span class="mr-2">Specific filename</span><a href="#specific-filename" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+   <span class="c1">#產生一組secret，可自行產生不同的secret
+</span>   <span class="n">totp</span> <span class="o">=</span> <span class="n">pyotp</span><span class="p">.</span><span class="n">TOTP</span><span class="p">(</span><span class="s">'base32secret3232'</span><span class="p">)</span>
 
-<div file="_sass/jekyll-theme-chirpy.scss" class="language-sass highlighter-rouge"><div class="code-header">
-        <span data-label-text="_sass/jekyll-theme-chirpy.scss"><i class="far fa-file-code"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">@import</span>
-  <span class="s2">"colors/light-typography"</span><span class="o">,</span>
-  <span class="s2">"colors/dark-typography"</span>
-</pre></td></tr></tbody></table></code></div></div>
+   <span class="c1">#產生uri
+</span>   <span class="n">uri</span><span class="o">=</span><span class="n">pyotp</span><span class="p">.</span><span class="n">totp</span><span class="p">.</span><span class="n">TOTP</span><span class="p">(</span><span class="s">'base32secret3232'</span><span class="p">).</span><span class="n">provisioning_uri</span><span class="p">(</span><span class="s">'user@example.com'</span><span class="p">,</span> <span class="n">issuer_name</span><span class="o">=</span><span class="s">'yutingwu'</span><span class="p">)</span>
 
-<h2 id="reverse-footnote"><span class="mr-2">Reverse Footnote</span><a href="#reverse-footnote" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+   <span class="c1">#產生QR Code 圖檔
+</span>
+   <span class="n">qrcode</span><span class="p">.</span><span class="n">make</span><span class="p">(</span><span class="n">uri</span><span class="p">).</span><span class="n">save</span><span class="p">(</span><span class="s">"qr.png"</span><span class="p">)</span>
 
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:footnote" role="doc-endnote">
-      <p>The footnote source <a href="#fnref:footnote" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-    <li id="fn:fn-nth-2" role="doc-endnote">
-      <p>The 2nd footnote source <a href="#fnref:fn-nth-2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
+   <span class="c1"># 驗證代碼是否正確
+</span>   <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">totp</span><span class="p">.</span><span class="n">verify</span><span class="p">(</span><span class="nb">input</span><span class="p">((</span><span class="s">"Enter the Code : "</span><span class="p">))))</span>
+      <span class="k">break</span>
+
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>下載Google Authenticator App</li>
+  <li>接下來，執行 app.py ，會產生QR Code 圖檔</li>
+  <li>使用App掃描QR Code 圖檔加入後，可以看到User@example.com以及簽署的資訊
+  <img data-src="https://photos.app.goo.gl/JXhDySLyDgxuPDwFA" width="50%" data-proofer-ignore></li>
+  <li>於Terminal 輸入產生的OTP代碼，執行結果如下
+  <img data-src="https://photos.app.goo.gl/en5B3wUM6dGxPvtE6" width="100%" data-proofer-ignore></li>
+</ol>
+
+<h2 id="reference"><span class="mr-2">Reference</span><a href="#reference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
+<p><a href="https://www.geeksforgeeks.org/two-factor-authentication-using-google-authenticator-in-python/">Two-Factor Authentication using Google Authenticator in Python</a>
+<a href="https://myapollo.com.tw/blog/python-pyotp/">Python One-Time Password 的好朋友 - pyotp</a></p>
+
 
 </div>
 
@@ -1936,7 +880,7 @@ PYENV_SHELL=bash
     <i class="far fa-folder-open fa-fw mr-1"></i>
     
       <a href='/categories/blogging/'>Blogging</a>,
-      <a href='/categories/demo/'>Demo</a>
+      <a href='/categories/tutorial/'>Tutorial</a>
   </div>
   
 
@@ -1945,8 +889,14 @@ PYENV_SHELL=bash
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
       
-      <a href="/tags/typography/"
-          class="post-tag no-text-decoration" >typography</a>
+      <a href="/tags/google-authetication/"
+          class="post-tag no-text-decoration" >Google Authetication</a>
+      
+      <a href="/tags/2fa/"
+          class="post-tag no-text-decoration" >2FA</a>
+      
+      <a href="/tags/python/"
+          class="post-tag no-text-decoration" >Python</a>
       
   </div>
   
@@ -1981,13 +931,13 @@ PYENV_SHELL=bash
 
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Text+and+Typography+-+YT+BLOG&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftext-and-typography%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=%E5%BF%AB%E9%80%9F%E5%B0%8E%E5%85%A52FA%E9%A9%97%E8%AD%89%EF%BC%9A%E4%BD%BF%E7%94%A8Google+Authentication+-+YT+BLOG&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fgoogle-2FA%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Ftext-and-typography%2F&text=Text+and+Typography+-+YT+BLOG" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fgoogle-2FA%2F&text=%E5%BF%AB%E9%80%9F%E5%B0%8E%E5%85%A52FA%E9%A9%97%E8%AD%89%EF%BC%9A%E4%BD%BF%E7%94%A8Google+Authentication+-+YT+BLOG" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -2474,72 +1424,72 @@ PYENV_SHELL=bash
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
 
 
 
@@ -2686,17 +1636,17 @@ Crea...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <div class="btn btn-outline-primary disabled"
+  <a href="/posts/enable-google-pv/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>-</p>
-  </div>
+    <p>Enable Google Page Views</p>
+  </a>
   
 
   
-  <a href="/posts/write-a-new-post/" class="btn btn-outline-primary"
+  <div class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>Writing a New Post</p>
-  </a>
+    <p>-</p>
+  </div>
   
 
 </div>
@@ -3152,65 +2102,6 @@ Crea...
     </div> <!-- #main-wrapper -->
 
     
-      <!--
-  mermaid-js loader
--->
-
-<script src="https://cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js"></script>
-
-<script>
-  $(function() {
-    function updateMermaid(event) {
-      if (event.source === window && event.data &&
-            event.data.direction === ModeToggle.ID) {
-
-        const mode = event.data.message;
-
-        if (typeof mermaid === "undefined") {
-          return;
-        }
-
-        let expectedTheme = (mode === ModeToggle.DARK_MODE? "dark" : "default");
-        let config = { theme: expectedTheme };
-
-        /* Re-render the SVG › <https://github.com/mermaid-js/mermaid/issues/311#issuecomment-332557344> */
-        $(".mermaid").each(function() {
-          let svgCode = $(this).prev().children().html();
-          $(this).removeAttr("data-processed");
-          $(this).html(svgCode);
-        });
-
-        mermaid.initialize(config);
-        mermaid.init(undefined, ".mermaid");
-      }
-    }
-
-    let initTheme = "default";
-
-    if ($("html[data-mode=dark]").length > 0
-      || ($("html[data-mode]").length == 0
-        && window.matchMedia("(prefers-color-scheme: dark)").matches ) ) {
-      initTheme = "dark";
-    }
-
-    let mermaidConf = {
-      theme: initTheme  /* <default|dark|forest|neutral> */
-    };
-
-    /* Markdown converts to HTML */
-    $("pre").has("code.language-mermaid").each(function() {
-      let svgCode = $(this).children().html();
-      $(this).addClass("unloaded");
-      $(this).after(`<div class=\"mermaid\">${svgCode}</div>`);
-    });
-
-    mermaid.initialize(mermaidConf);
-
-    window.addEventListener("message", updateMermaid);
-  });
-</script>
-
-    
 
     <div id="mask"></div>
 
@@ -3392,26 +2283,6 @@ SimpleJekyllSearch({
 
 <script defer src="/assets/js/dist/post.min.js"></script>
 
-
-  <!-- MathJax -->
-  <script>
-  /* see: <https://docs.mathjax.org/en/latest/options/input/tex.html#tex-options> */
-  MathJax = {
-    tex: {
-      inlineMath: [              /* start/end delimiter pairs for in-line math */
-        ['$','$'],
-        ['\\(','\\)']
-      ],
-      displayMath: [             /* start/end delimiter pairs for display math */
-        ['$$', '$$'],
-        ['\\[', '\\]']
-      ]
-    }
-  };
-  </script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-  </script>
 
 
 <!-- commons -->
