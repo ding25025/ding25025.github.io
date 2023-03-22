@@ -1,6 +1,6 @@
 self.importScripts('/assets/js/data/swcache.js');
 
-const cacheName = 'chirpy-20230318.161437';
+const cacheName = 'chirpy-20230322.215039';
 
 function verifyDomain(url) {
   for (const domain of allowedDomains) {
@@ -61,8 +61,8 @@ self.addEventListener('fetch', event => {
         const url = event.request.url;
 
         if (event.request.method !== 'GET' ||
-              !verifyDomain(url) ||
-              isExcluded(url)) {
+          !verifyDomain(url) ||
+          isExcluded(url)) {
           return response;
         }
 
