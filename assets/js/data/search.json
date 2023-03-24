@@ -38,6 +38,21 @@
   },
   
   {
+    "title": "快速導入2FA驗證：使用Google Authentication",
+    "url": "/posts/google-2FA/",
+    "categories": "Blogging, Tutorial",
+    "tags": "Google Authetication, 2FA, Python",
+    "date": "2023-03-17 15:02:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Google Authentication 介紹現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有提供產生一次性OTP服務。這個範例是使用Google Authentication 實作，重點是完全免費。過去實做這項功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒：  Time-based One-Time Password (TOTP):藉由目前的時間以及secret進行Hash產出OTP  HMAC-Based One-time Password (HOTP):根據計數器以及secret進行Hash產出OTP使用Python實作2FA  首先，須先下載相關套件     pip install pyotp qrcode        建立一個名app 的Python 檔案：app.py ，寫入下列程式碼       import pyotp   import qrcode   #產生一組secret，可自行產生不同的secret   totp = pyotp.TOTP('base32secret3232')   #產生uri   uri=pyotp.totp.TOTP('base32secret3232').provisioning_uri('user@example.com', issuer_name='yutingwu')   #產生QR Code 圖檔   qrcode.make(uri).save(\"qr.png\")   # 驗證代碼是否正確   while True:      print(totp.verify(input((\"Enter the Code : \"))))      break        下載Google Authenticator App  接下來，執行 app.py ，會產生QR Code 圖檔  使用App掃描QR Code 圖檔加入後，可以看到User@example.com以及簽署的資訊    於Terminal 輸入產生的OTP代碼，執行結果如下  ReferenceTwo-Factor Authentication using Google Authenticator in PythonPython One-Time Password 的好朋友 - pyotp"
+  },
+  
+  {
     "title": "Enable Google Page Views",
     "url": "/posts/enable-google-pv/",
     "categories": "Blogging, Tutorial",

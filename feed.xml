@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>YT BLOG</title>
   <subtitle>No matter how hard it is, you need to step by step and practice, until you got it.</subtitle>
-  <updated>2023-03-22T22:23:40+08:00</updated>
+  <updated>2023-03-24T20:51:31+08:00</updated>
   <author>
     <name>YU-TING,WU</name>
     <uri>http://localhost:4000/</uri>
@@ -13,118 +13,10 @@
   <link rel="alternate" type="text/html" hreflang="zh-TW"
     href="http://localhost:4000/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator>
-  <rights> © 2023 YU-TING,WU </rights>
-  <rights> © 2023 YU-TING,WU </rights>
+  <rights> © 2022 YU-TING,WU </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
-
-  
-  <entry>
-    <title>快速導入2FA驗證：使用Google Authentication</title>
-    <link href="http://localhost:4000/posts/google-2FA/" rel="alternate" type="text/html" title="快速導入2FA驗證：使用Google Authentication" />
-    <published>2023-03-17T15:02:00+08:00</published>
-  
-    <updated>2023-03-17T15:02:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/google-2FA/</id>
-    <content src="http://localhost:4000/posts/google-2FA/" />
-    <author>
-      <name>YuTing Wu</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Google Authentication 介紹
-現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有提供產生一次性OTP服務。
-這個範例是使用Google Authentication 實作，重點是完全免費。
-過去實做這項功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。
-目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒：
-
-  Time-based One-Time Password (TOTP):藉由目前的時間以及secret進行Hash產出OTP
-  HMAC-Based One-time Password (HOTP):根據計數器以及secret進行Hash產出OTP
-
-
-使用Python實作2FA
-
-
-  首先，須先下載相關套件
-     pip install pyotp qrcode
-    
-  
-  ...
-    </summary>
-  
-
-  </entry>
-
-
-  
-  <entry>
-    <title>快速導入2FA驗證：使用Google Authentication</title>
-    <link href="http://localhost:4000/posts/google-2FA/" rel="alternate" type="text/html" title="快速導入2FA驗證：使用Google Authentication" />
-    <published>2023-03-17T15:02:00+08:00</published>
-  
-    <updated>2023-03-17T15:02:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/google-2FA/</id>
-    <content src="http://localhost:4000/posts/google-2FA/" />
-    <author>
-      <name>YuTing Wu</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Google Authentication 介紹
-現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有提供產生一次性OTP服務。
-這個範例是使用Google Authentication 實作，重點是完全免費。
-過去實做這項功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。
-目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒：
-
-  Time-based One-Time Password (TOTP):藉由目前的時間以及secret進行Hash產出OTP
-  HMAC-Based One-time Password (HOTP):根據計數器以及secret進行Hash產出OTP
-
-
-使用Python實作2FA
-
-
-  首先，須先下載相關套件
-     pip install pyotp qrcode
-    
-  
-  ...
-    </summary>
-  
-
-  </entry>
 
   
   <entry>
