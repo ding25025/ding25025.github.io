@@ -37,25 +37,33 @@
   
 
   
+
+  
+
+  
+
+  
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Tutorial" />
+<meta property="og:title" content="快速導入2FA驗證：使用Google Authentication" />
+<meta name="author" content="YuTing Wu" />
 <meta property="og:locale" content="zh_TW" />
-<meta name="description" content="No matter how hard it is, you need to step by step and practice, until you got it." />
-<meta property="og:description" content="No matter how hard it is, you need to step by step and practice, until you got it." />
-<link rel="canonical" href="http://localhost:4000/categories/tutorial/" />
-<meta property="og:url" content="http://localhost:4000/categories/tutorial/" />
+<meta name="description" content="Google Authentication 介紹 現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有提供產生一次性OTP服務。 這個範例是使用Google Authentication 實作，重點是完全免費。 過去實做這項功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。 目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒： Time-based One-Time Password (TOTP):藉由目前的時間以及secret進行Hash產出OTP HMAC-Based One-time Password (HOTP):根據計數器以及secret進行Hash產出OTP" />
+<meta property="og:description" content="Google Authentication 介紹 現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有提供產生一次性OTP服務。 這個範例是使用Google Authentication 實作，重點是完全免費。 過去實做這項功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。 目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒： Time-based One-Time Password (TOTP):藉由目前的時間以及secret進行Hash產出OTP HMAC-Based One-time Password (HOTP):根據計數器以及secret進行Hash產出OTP" />
+<link rel="canonical" href="http://localhost:4000/posts/google-2FA/" />
+<meta property="og:url" content="http://localhost:4000/posts/google-2FA/" />
 <meta property="og:site_name" content="YT BLOG" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-17T15:02:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Tutorial" />
+<meta property="twitter:title" content="快速導入2FA驗證：使用Google Authentication" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"No matter how hard it is, you need to step by step and practice, until you got it.","headline":"Tutorial","url":"http://localhost:4000/categories/tutorial/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"YuTing Wu"},"dateModified":"2023-03-17T15:02:00+08:00","datePublished":"2023-03-17T15:02:00+08:00","description":"Google Authentication 介紹 現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有提供產生一次性OTP服務。 這個範例是使用Google Authentication 實作，重點是完全免費。 過去實做這項功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。 目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒： Time-based One-Time Password (TOTP):藉由目前的時間以及secret進行Hash產出OTP HMAC-Based One-time Password (HOTP):根據計數器以及secret進行Hash產出OTP","headline":"快速導入2FA驗證：使用Google Authentication","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/google-2FA/"},"url":"http://localhost:4000/posts/google-2FA/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>Tutorial | YT BLOG </title>
+  <title>快速導入2FA驗證：使用Google Authentication | YT BLOG </title>
 
   <!--
   The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
@@ -108,7 +116,12 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 
   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.css">
+  
 
+  
+  <!-- Manific Popup -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1/dist/magnific-popup.min.css">
   
 
   <!-- JavaScript -->
@@ -389,19 +402,13 @@
       
 
         
-          <span>
-            <a href="/categories">
-              Categories
-            </a>
-          </span>
-        
 
       
 
         
 
           
-            <span>Tutorial</span>
+            <span>快速導入2FA驗證：使用Google Authentication</span>
           
 
         
@@ -415,7 +422,7 @@
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      Category
+      Post
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -454,22 +461,324 @@
     
       
       
+        <!--
+  Refactor the HTML structure.
+-->
+
+
+
+<!--
+  In order to allow a wide table to scroll horizontally,
+  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+-->
+
+
+
+<!--
+  Fixed kramdown code highlight rendering:
+  https://github.com/penibelst/jekyll-compress-html/issues/101
+  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+-->
+
+
+
+<!-- Add attribute 'hide-bullet' to the checkbox list -->
+
+
+
+<!-- images -->
+
+
+
+
+  
+  
+
+  
+    
+      
+      
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
         
 
+        <!-- Add image path -->
+        
 
+        
+        
 
-<div id="page-category">
-  <h1 class="pl-lg-2">
-    <i class="far fa-folder-open fa-fw text-muted"></i>
-    Tutorial
-    <span class="lead text-muted pl-2">5</span>
-  </h1>
+      
 
-  <ul class="post-content pl-0">
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
     
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/google-2FA/">快速導入2FA驗證：使用Google Authentication</a>
-      <span class="dash flex-grow-1"></span>
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+
+      
+    
+
+    
+      
+
+        <!-- Add CDN URL -->
+        
+
+        <!-- Add image path -->
+        
+
+        
+        
+
+      
+
+      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+
+      
+
+    
+
+    <!-- Add SVG placehoder to prevent layout reflow -->
+
+    
+
+    <!-- Bypass the HTML-proofer test -->
+    
+
+    
+
+  
+
+  
+
+
+
+<!-- Add header for code snippets -->
+
+
+
+<!-- Create heading anchors -->
+
+
+
+
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
+
+    
+
+  
+
+  
+  
+
+  
+
+
+
+
+<!-- Wrap prompt element of blockquote with the <div> tag -->
+
+
+
+
+
+
+
+<!-- return -->
+
+
+
+
+
+<h1 data-toc-skip>快速導入2FA驗證：使用Google Authentication</h1>
+
+<div class="post-meta text-muted">
+    <!-- published date -->
+    <span>
+      Posted
       <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
@@ -479,101 +788,233 @@
 
 
 
-<span class="text-muted small"
+<em class=""
     data-ts="1679036520"
     data-df="ll"
-    >
+    data-toggle="tooltip" data-placement="bottom">
   Mar 17, 2023
-</span>
+</em>
 
-    </li>
+    </span>
+
+    <!-- lastmod date -->
     
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/enable-google-pv/">Enable Google Page Views</a>
-      <span class="dash flex-grow-1"></span>
+
+  
+
+  <div class="d-flex justify-content-between">
+    <!-- author -->
+    <span>
+      
+      
+
+      
+
+      By
+
+      <em>
+        
+        YU-TING,WU
+        
+      </em>
+    </span>
+
+    <div>
+      <!-- page views -->
+      
+
+      <!-- read time -->
       <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+<!-- words per minute  -->
 
 
 
 
 
-<span class="text-muted small"
-    data-ts="1609716720"
-    data-df="ll"
-    >
-  Jan  4, 2021
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+  title="357 words">
+  <em>1 min</em> read</span>
+
+    </div>
+
+  </div> <!-- .d-flex -->
+
+</div> <!-- .post-meta -->
+
+<div class="post-content">
+  <h2 id="google-authentication-介紹"><span class="mr-2">Google Authentication 介紹</span><a href="#google-authentication-介紹" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>現在越來越多服務使用2FA驗證，無論是Microsoft或是Google，都有提供產生一次性OTP服務。
+這個範例是使用Google Authentication 實作，重點是完全免費。
+過去實做這項功能通常會使用簡訊或是email寄驗證碼，但現在可以不用花錢，導入也很簡單。
+目前有提供兩種演算法，並產生一次限時的代碼，預設時間為30秒：</p>
+<ol>
+  <li>Time-based One-Time Password (TOTP):藉由目前的時間以及secret進行Hash產出OTP</li>
+  <li>HMAC-Based One-time Password (HOTP):根據計數器以及secret進行Hash產出OTP</li>
+</ol>
+
+<h3 id="使用python實作2fa"><span class="mr-2">使用Python實作2FA</span><a href="#使用python實作2fa" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
+<ol>
+  <li>首先，須先下載相關套件
+    <div class="language-shell highlighter-rouge"><div class="code-header">
+        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> pip <span class="nb">install </span>pyotp qrcode
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>建立一個名app 的Python 檔案：app.py ，寫入下列程式碼
+    <div class="language-python highlighter-rouge"><div class="code-header">
+        <span data-label-text="Python"><i class="fas fa-code small"></i></span>
+      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre>   <span class="kn">import</span> <span class="nn">pyotp</span>
+   <span class="kn">import</span> <span class="nn">qrcode</span>
+
+   <span class="c1">#產生一組secret，可自行產生不同的secret
+</span>   <span class="n">totp</span> <span class="o">=</span> <span class="n">pyotp</span><span class="p">.</span><span class="n">TOTP</span><span class="p">(</span><span class="s">'base32secret3232'</span><span class="p">)</span>
+
+   <span class="c1">#產生uri
+</span>   <span class="n">uri</span><span class="o">=</span><span class="n">pyotp</span><span class="p">.</span><span class="n">totp</span><span class="p">.</span><span class="n">TOTP</span><span class="p">(</span><span class="s">'base32secret3232'</span><span class="p">).</span><span class="n">provisioning_uri</span><span class="p">(</span><span class="s">'user@example.com'</span><span class="p">,</span> <span class="n">issuer_name</span><span class="o">=</span><span class="s">'yutingwu'</span><span class="p">)</span>
+
+   <span class="c1">#產生QR Code 圖檔
 </span>
+   <span class="n">qrcode</span><span class="p">.</span><span class="n">make</span><span class="p">(</span><span class="n">uri</span><span class="p">).</span><span class="n">save</span><span class="p">(</span><span class="s">"qr.png"</span><span class="p">)</span>
 
-    </li>
-    
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/customize-the-favicon/">Customize the Favicon</a>
-      <span class="dash flex-grow-1"></span>
-      <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+   <span class="c1"># 驗證代碼是否正確
+</span>   <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+      <span class="k">print</span><span class="p">(</span><span class="n">totp</span><span class="p">.</span><span class="n">verify</span><span class="p">(</span><span class="nb">input</span><span class="p">((</span><span class="s">"Enter the Code : "</span><span class="p">))))</span>
+      <span class="k">break</span>
 
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>下載Google Authenticator App</li>
+  <li>接下來，執行 app.py ，會產生QR Code 圖檔</li>
+  <li>使用App掃描QR Code 圖檔加入後，可以看到User@example.com以及簽署的資訊
+  <img data-src="/assets/img/favicons/Google2FA.png" width="50%" data-proofer-ignore></li>
+  <li>於Terminal 輸入產生的OTP代碼，執行結果如下
+  <img data-src="/assets/img/favicons/otptest.jpg" width="60%" data-proofer-ignore></li>
+</ol>
 
+<h2 id="reference"><span class="mr-2">Reference</span><a href="#reference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
-
-
-<span class="text-muted small"
-    data-ts="1565454840"
-    data-df="ll"
-    >
-  Aug 11, 2019
-</span>
-
-    </li>
-    
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/getting-started/">Getting Started</a>
-      <span class="dash flex-grow-1"></span>
-      <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
+<h4 id="two-factor-authentication-using-google-authenticator-in-python"><span class="mr-2"><a href="https://www.geeksforgeeks.org/two-factor-authentication-using-google-authenticator-in-python/" target="_blank"><span class="mr-2">Two-Factor Authentication using Google Authenticator in Python</a></span><a href="#two-factor-authentication-using-google-authenticator-in-python" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+<h4 id="python-one-time-password-的好朋友---pyotp"><span class="mr-2"><a href="https://myapollo.com.tw/blog/python-pyotp/" target="_blank"><span class="mr-2">Python One-Time Password 的好朋友 - pyotp</a></span><a href="#python-one-time-password-的好朋友---pyotp" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 
-
-
-
-<span class="text-muted small"
-    data-ts="1565355300"
-    data-df="ll"
-    >
-  Aug  9, 2019
-</span>
-
-    </li>
-    
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/write-a-new-post/">Writing a New Post</a>
-      <span class="dash flex-grow-1"></span>
-      <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<span class="text-muted small"
-    data-ts="1565244600"
-    data-df="ll"
-    >
-  Aug  8, 2019
-</span>
-
-    </li>
-    
-  </ul>
 </div>
+
+<div class="post-tail-wrapper text-muted">
+
+  <!-- categories -->
+  
+  <div class="post-meta mb-3">
+    <i class="far fa-folder-open fa-fw mr-1"></i>
+    
+      <a href='/categories/blogging/'>Blogging</a>,
+      <a href='/categories/tutorial/'>Tutorial</a>
+  </div>
+  
+
+  <!-- tags -->
+  
+  <div class="post-tags">
+    <i class="fa fa-tags fa-fw mr-1"></i>
+      
+      <a href="/tags/google-authetication/"
+          class="post-tag no-text-decoration" >Google Authetication</a>
+      
+      <a href="/tags/2fa/"
+          class="post-tag no-text-decoration" >2FA</a>
+      
+      <a href="/tags/python/"
+          class="post-tag no-text-decoration" >Python</a>
+      
+  </div>
+  
+
+  <div class="post-tail-bottom
+    d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+    <div class="license-wrapper">
+
+      
+
+        
+
+        This post is licensed under 
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          CC BY 4.0
+        </a>
+         by the author.
+
+      
+    </div>
+
+    <!--
+ Post sharing snippet
+-->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted mr-1">Share</span>
+  <span class="share-icons">
+    
+    
+    
+
+    
+      
+        <a href="https://www.facebook.com/sharer/sharer.php?title=%E5%BF%AB%E9%80%9F%E5%B0%8E%E5%85%A52FA%E9%A9%97%E8%AD%89%EF%BC%9A%E4%BD%BF%E7%94%A8Google+Authentication+-+YT+BLOG&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fgoogle-2FA%2F" data-toggle="tooltip" data-placement="top"
+          title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-fw fab fa-facebook-square"></i>
+        </a>
+    
+      
+        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fgoogle-2FA%2F&text=%E5%BF%AB%E9%80%9F%E5%B0%8E%E5%85%A52FA%E9%A9%97%E8%AD%89%EF%BC%9A%E4%BD%BF%E7%94%A8Google+Authentication+-+YT+BLOG" data-toggle="tooltip" data-placement="top"
+          title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
+          <i class="fa-fw fab fa-telegram"></i>
+        </a>
+    
+
+    <i id="copy-link" class="fa-fw fas fa-link small"
+        data-toggle="tooltip" data-placement="top"
+        title="Copy link"
+        data-title-succeed="Link copied successfully!">
+    </i>
+
+  </span>
+</div>
+
+
+  </div><!-- .post-tail-bottom -->
+
+</div><!-- div.post-tail-wrapper -->
+
 
       
     
@@ -993,11 +1434,289 @@
     </div>
 
     
+      
+      
+
+
+
+<!-- BS-toc.js will be loaded at medium priority -->
+<script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@1.0.1/dist/bootstrap-toc.min.js"></script>
+
+<div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+  <div class="panel-heading pl-3 pt-2 mb-2">Contents</div>
+  <nav id="toc" data-toggle="toc"></nav>
+</div>
+
+
+    
   </div>
 
 </div>
 
 <!-- tail -->
+
+<div class="row">
+  <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 pl-3 pr-3 pr-xl-4">
+    
+      
+      <!--
+ Recommend the other 3 posts according to the tags and categories of the current post,
+ if the number is not enough, use the other latest posts to supplement.
+-->
+
+<!-- The total size of related posts  -->
+
+
+<!-- An random integer that bigger than 0  -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<!-- Fill with the other newlest posts  -->
+
+
+
+
+
+  <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
+    <h3 class="pt-2 mt-1 mb-4 ml-1"
+      data-toc-skip>Further Reading</h3>
+    <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/write-a-new-post/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1565244600"
+    data-df="ll"
+    >
+  Aug  8, 2019
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Writing a New Post</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/getting-started/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1565355300"
+    data-df="ll"
+    >
+  Aug  9, 2019
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Getting Started</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Prerequisites
+
+Follow the instructions in the Jekyll Docs to complete the installation of Ruby, RubyGems, Jekyll, and Bundler. In addition, Git is also required to be installed.
+
+Installation
+
+Crea...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/customize-the-favicon/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1565454840"
+    data-df="ll"
+    >
+  Aug 11, 2019
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Customize the Favicon</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+    </div> <!-- .card-deck -->
+  </div> <!-- #related-posts -->
+
+
+    
+      
+      <!--
+  Navigation buttons at the bottom of the post.
+-->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+  <a href="/posts/enable-google-pv/" class="btn btn-outline-primary"
+    prompt="Older">
+    <p>Enable Google Page Views</p>
+  </a>
+  
+
+  
+  <div class="btn btn-outline-primary disabled"
+    prompt="Newer">
+    <p>-</p>
+  </div>
+  
+
+</div>
+
+    
+      
+      <!--  The comments switcher -->
+
+
+    
+  </div>
+</div>
 
 
 
@@ -1511,6 +2230,52 @@ SimpleJekyllSearch({
 <!-- layout specified -->
 
 
+  
+
+
+
+  <!-- image lazy-loading & popup & clipboard -->
+  
+
+  
+
+
+
+
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+  
+    
+
+    
+
+  
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/combine/npm/magnific-popup@1/dist/jquery.magnific-popup.min.js,npm/lozad/dist/lozad.min.js,npm/clipboard@2/dist/clipboard.min.js"></script>
+
+
 
 
 
@@ -1574,7 +2339,7 @@ SimpleJekyllSearch({
 
 
 
-<script defer src="/assets/js/dist/misc.min.js"></script>
+<script defer src="/assets/js/dist/post.min.js"></script>
 
 
 
