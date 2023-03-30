@@ -12,15 +12,19 @@
 
 
 
-<html lang="zh-TW"
-  
+<html lang="zh-TW" 
+
 >
 
-  <!--
+<!--
   The Head
 -->
 
 <head>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5595087372367204"
     crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
@@ -268,11 +272,12 @@
 </script>
 
   
+
 </head>
 
-  <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+<body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
 
-    <!--
+  <!--
   The Side Bar
 -->
 
@@ -384,7 +389,7 @@
 </div><!-- #sidebar -->
 
 
-    <!--
+  <!--
   The Top Bar
 -->
 
@@ -445,10 +450,10 @@
 </div>
 
 
-    <div id="main-wrapper" class="d-flex justify-content-center">
-      <div id="main" class="container pl-xl-4 pr-xl-4">
+  <div id="main-wrapper" class="d-flex justify-content-center">
+    <div id="main" class="container pl-xl-4 pr-xl-4">
 
-        
+      
 
 
 
@@ -714,6 +719,18 @@
       
 
     
+      
+
+      
+      
+
+      
+      
+      
+
+      
+
+    
 
     
 
@@ -784,10 +801,10 @@
 <h1 data-toc-skip>快速導入2FA驗證：使用Google Authentication</h1>
 
 <div class="post-meta text-muted">
-    <!-- published date -->
-    <span>
-      Posted
-      <!--
+  <!-- published date -->
+  <span>
+    Posted
+    <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -803,10 +820,10 @@
   Mar 17, 2023
 </em>
 
-    </span>
+  </span>
 
-    <!-- lastmod date -->
-    
+  <!-- lastmod date -->
+  
 
   
 
@@ -851,8 +868,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="357 words">
-  <em>1 min</em> read</span>
+  title="501 words">
+  <em>2 min</em> read</span>
 
     </div>
 
@@ -930,6 +947,19 @@
   <img data-src="/assets/img/favicons/otptest.jpg" width="60%" data-proofer-ignore></li>
 </ol>
 
+<h3 id="流程圖"><span class="mr-2">流程圖</span><a href="#流程圖" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<div class="mermaid">
+  sequenceDiagram
+      用戶端-&gt;&gt;伺服器 :1.呼叫登入API
+      伺服器-&gt;&gt;用戶端 :2.驗證帳號密碼,若失敗導入登入頁
+      伺服器-&gt;&gt; 伺服器 :3.驗證成功,進行2FA驗證,產生secret
+      伺服器-&gt;&gt; 用戶端 :4.透過uri傳送secret,前端顯示QRCode
+      用戶端-&gt;&gt;Google Authenticator :5.第一次需掃描QRCode註冊服務
+      Google Authenticator-&gt; 用戶端 : 6.產生OTP Code
+      用戶端-&gt;&gt;伺服器 :7.輸入OTP Code,驗證是否正確
+      伺服器-&gt;&gt;用戶端 :8.回傳驗證成功或失敗
+</div>
+
 <h2 id="reference"><span class="mr-2">Reference</span><a href="#reference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <h4 id="two-factor-authentication-using-google-authenticator-in-python"><span class="mr-2"><a href="https://www.geeksforgeeks.org/two-factor-authentication-using-google-authenticator-in-python/" target="_blank"><span class="mr-2">Two-Factor Authentication using Google Authenticator in Python</a></span><a href="#two-factor-authentication-using-google-authenticator-in-python" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
@@ -945,8 +975,8 @@
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw mr-1"></i>
     
-      <a href='/categories/blogging/'>Blogging</a>,
-      <a href='/categories/tutorial/'>Tutorial</a>
+    <a href='/categories/blogging/'>Blogging</a>,
+    <a href='/categories/tutorial/'>Tutorial</a>
   </div>
   
 
@@ -954,16 +984,13 @@
   
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
-      
-      <a href="/tags/google-authetication/"
-          class="post-tag no-text-decoration" >Google Authetication</a>
-      
-      <a href="/tags/2fa/"
-          class="post-tag no-text-decoration" >2FA</a>
-      
-      <a href="/tags/python/"
-          class="post-tag no-text-decoration" >Python</a>
-      
+    
+    <a href="/tags/google-authetication/" class="post-tag no-text-decoration">Google Authetication</a>
+    
+    <a href="/tags/2fa/" class="post-tag no-text-decoration">2FA</a>
+    
+    <a href="/tags/python/" class="post-tag no-text-decoration">Python</a>
+    
   </div>
   
 
@@ -973,13 +1000,13 @@
 
       
 
-        
+      
 
-        This post is licensed under 
-        <a href="https://creativecommons.org/licenses/by/4.0/">
-          CC BY 4.0
-        </a>
-         by the author.
+      This post is licensed under 
+      <a href="https://creativecommons.org/licenses/by/4.0/">
+        CC BY 4.0
+      </a>
+       by the author.
 
       
     </div>
@@ -1022,7 +1049,6 @@
   </div><!-- .post-tail-bottom -->
 
 </div><!-- div.post-tail-wrapper -->
-
 
       
     
@@ -1728,7 +1754,7 @@ Crea...
 
 
 
-        <!-- The Footer -->
+      <!-- The Footer -->
 
 <footer class="row pl-3 pr-3">
   <div class="col-12 d-flex justify-content-between align-items-center text-muted pl-0 pr-0">
@@ -1763,9 +1789,9 @@ Crea...
 </footer>
 
 
-      </div>
+    </div>
 
-      <!--
+    <!--
   The Search results
 -->
 <div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
@@ -2165,34 +2191,32 @@ Crea...
 </div>
 
 
-    </div> <!-- #main-wrapper -->
+  </div> <!-- #main-wrapper -->
 
-    
+  <div id="mask"></div>
 
-    <div id="mask"></div>
+  <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
-      <i class="fas fa-angle-up"></i>
-    </a>
+  
+  <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true"
+    data-autohide="false">
+    <div class="toast-header">
+      <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body text-center pt-0">
+      <p class="pl-2 pr-2 mb-3">A new version of content is available.</p>
+      <button type="button" class="btn btn-primary" aria-label="Update">
+        Update
+      </button>
+    </div>
+  </div>
+  
 
-    
-      <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
-        data-animation="true" data-autohide="false">
-        <div class="toast-header">
-          <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="toast-body text-center pt-0">
-          <p class="pl-2 pr-2 mb-3">A new version of content is available.</p>
-          <button type="button" class="btn btn-primary" aria-label="Update">
-            Update
-          </button>
-        </div>
-      </div>
-    
-
-    <!--
+  <!--
   Jekyll Simple Search loader
   See: <https://github.com/christian-fei/Simple-Jekyll-Search>
 -->
@@ -2231,7 +2255,7 @@ SimpleJekyllSearch({
 </script>
 
 
-    <!--
+  <!--
   JS selector for site.
 -->
 
@@ -2358,7 +2382,6 @@ SimpleJekyllSearch({
 
 
 
-  </body>
+</body>
 
 </html>
-

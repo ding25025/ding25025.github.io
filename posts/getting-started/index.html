@@ -12,15 +12,19 @@
 
 
 
-<html lang="zh-TW"
-  
+<html lang="zh-TW" 
+
 >
 
-  <!--
+<!--
   The Head
 -->
 
 <head>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5595087372367204"
     crossorigin="anonymous"></script>
   <!-- Google tag (gtag.js) -->
@@ -268,11 +272,12 @@
 </script>
 
   
+
 </head>
 
-  <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+<body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
 
-    <!--
+  <!--
   The Side Bar
 -->
 
@@ -384,7 +389,7 @@
 </div><!-- #sidebar -->
 
 
-    <!--
+  <!--
   The Top Bar
 -->
 
@@ -445,10 +450,10 @@
 </div>
 
 
-    <div id="main-wrapper" class="d-flex justify-content-center">
-      <div id="main" class="container pl-xl-4 pr-xl-4">
+  <div id="main-wrapper" class="d-flex justify-content-center">
+    <div id="main" class="container pl-xl-4 pr-xl-4">
 
-        
+      
 
 
 
@@ -895,10 +900,10 @@
 <h1 data-toc-skip>Getting Started</h1>
 
 <div class="post-meta text-muted">
-    <!-- published date -->
-    <span>
-      Posted
-      <!--
+  <!-- published date -->
+  <span>
+    Posted
+    <!--
   Date format snippet
   See: ${JS_ROOT}/utils/locale-dateime.js
 -->
@@ -914,10 +919,10 @@
   Aug  9, 2019
 </em>
 
-    </span>
+  </span>
 
-    <!-- lastmod date -->
-    
+  <!-- lastmod date -->
+  
 
   
 
@@ -933,7 +938,7 @@
 
       <em>
         
-          <a href="https://github.com/cotes2020/">Cotes Chung</a>
+        <a href="https://github.com/cotes2020/">Cotes Chung</a>
         
       </em>
     </span>
@@ -1206,8 +1211,8 @@ The merge is likely to conflict with your local modifications. Please be patient
   <div class="post-meta mb-3">
     <i class="far fa-folder-open fa-fw mr-1"></i>
     
-      <a href='/categories/blogging/'>Blogging</a>,
-      <a href='/categories/tutorial/'>Tutorial</a>
+    <a href='/categories/blogging/'>Blogging</a>,
+    <a href='/categories/tutorial/'>Tutorial</a>
   </div>
   
 
@@ -1215,10 +1220,9 @@ The merge is likely to conflict with your local modifications. Please be patient
   
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
-      
-      <a href="/tags/getting-started/"
-          class="post-tag no-text-decoration" >getting started</a>
-      
+    
+    <a href="/tags/getting-started/" class="post-tag no-text-decoration">getting started</a>
+    
   </div>
   
 
@@ -1228,13 +1232,13 @@ The merge is likely to conflict with your local modifications. Please be patient
 
       
 
-        
+      
 
-        This post is licensed under 
-        <a href="https://creativecommons.org/licenses/by/4.0/">
-          CC BY 4.0
-        </a>
-         by the author.
+      This post is licensed under 
+      <a href="https://creativecommons.org/licenses/by/4.0/">
+        CC BY 4.0
+      </a>
+       by the author.
 
       
     </div>
@@ -1277,7 +1281,6 @@ The merge is likely to conflict with your local modifications. Please be patient
   </div><!-- .post-tail-bottom -->
 
 </div><!-- div.post-tail-wrapper -->
-
 
       
     
@@ -1977,7 +1980,7 @@ The merge is likely to conflict with your local modifications. Please be patient
 
 
 
-        <!-- The Footer -->
+      <!-- The Footer -->
 
 <footer class="row pl-3 pr-3">
   <div class="col-12 d-flex justify-content-between align-items-center text-muted pl-0 pr-0">
@@ -2012,9 +2015,9 @@ The merge is likely to conflict with your local modifications. Please be patient
 </footer>
 
 
-      </div>
+    </div>
 
-      <!--
+    <!--
   The Search results
 -->
 <div id="search-result-wrapper" class="d-flex justify-content-center unloaded">
@@ -2414,34 +2417,32 @@ The merge is likely to conflict with your local modifications. Please be patient
 </div>
 
 
-    </div> <!-- #main-wrapper -->
+  </div> <!-- #main-wrapper -->
 
-    
+  <div id="mask"></div>
 
-    <div id="mask"></div>
+  <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
+    <i class="fas fa-angle-up"></i>
+  </a>
 
-    <a id="back-to-top" href="#" aria-label="back-to-top" class="btn btn-lg btn-box-shadow" role="button">
-      <i class="fas fa-angle-up"></i>
-    </a>
+  
+  <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-animation="true"
+    data-autohide="false">
+    <div class="toast-header">
+      <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body text-center pt-0">
+      <p class="pl-2 pr-2 mb-3">A new version of content is available.</p>
+      <button type="button" class="btn btn-primary" aria-label="Update">
+        Update
+      </button>
+    </div>
+  </div>
+  
 
-    
-      <div id="notification" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
-        data-animation="true" data-autohide="false">
-        <div class="toast-header">
-          <button type="button" class="ml-2 ml-auto close" data-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="toast-body text-center pt-0">
-          <p class="pl-2 pr-2 mb-3">A new version of content is available.</p>
-          <button type="button" class="btn btn-primary" aria-label="Update">
-            Update
-          </button>
-        </div>
-      </div>
-    
-
-    <!--
+  <!--
   Jekyll Simple Search loader
   See: <https://github.com/christian-fei/Simple-Jekyll-Search>
 -->
@@ -2480,7 +2481,7 @@ SimpleJekyllSearch({
 </script>
 
 
-    <!--
+  <!--
   JS selector for site.
 -->
 
@@ -2607,7 +2608,6 @@ SimpleJekyllSearch({
 
 
 
-  </body>
+</body>
 
 </html>
-
