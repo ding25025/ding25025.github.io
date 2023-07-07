@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>YT BLOG</title>
   <subtitle>No matter how hard it is, you need to step by step and practice, until you got it.</subtitle>
-  <updated>2023-03-30T20:55:21+08:00</updated>
+  <updated>2023-07-07T13:17:03+08:00</updated>
   <author>
     <name>YU-TING,WU</name>
     <uri>http://localhost:4000/</uri>
@@ -17,6 +17,55 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Upgrade Apache2 version in Ubuntu 18.0.4</title>
+    <link href="http://localhost:4000/posts/upgrade-Apache2-version/" rel="alternate" type="text/html" title="Upgrade Apache2 version in Ubuntu 18.0.4" />
+    <published>2023-07-07T12:02:00+08:00</published>
+  
+    <updated>2023-07-07T12:02:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/upgrade-Apache2-version/</id>
+    <content src="http://localhost:4000/posts/upgrade-Apache2-version/" />
+    <author>
+      <name>YuTing Wu</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Introduction
+There are some cybersecutriy problem, so we need to uprade Apache2 version.
+When upgrading Apache, it is important to check for any potential issues with rewrite rules.CVE-2023-25690
+
+
+  Origin Version: Apache/2.4.54
+
+  Upgrade Version: Apache/2.4.57
+
+
+The Apache2 vulerabilities as follows:
+
+  CVE-2023-25690 (Prior to Apache HTTP Server 2.4.55)
+  CVE-2022-37436 (Prior to Apache HTT...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -194,46 +243,6 @@ There are two ways to create a new repository for this theme:
 
   Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so you can focus on writing.
   Forking ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Writing a New Post</title>
-    <link href="http://localhost:4000/posts/write-a-new-post/" rel="alternate" type="text/html" title="Writing a New Post" />
-    <published>2019-08-08T14:10:00+08:00</published>
-  
-    <updated>2019-08-08T14:10:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/write-a-new-post/</id>
-    <content src="http://localhost:4000/posts/write-a-new-post/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      This post will guide you how to write a post on Chirpy theme. Even if you have previous experience with Jekyll, this article is worth reading, because many features require specific variables to be set.
-
-Naming and Path
-
-Create a new file named YYYY-MM-DD-TITLE.EXTENSION and put it in the _posts of the root directory. Please note that the EXTENSION must be one of md and markdown. If you want to...
     </summary>
   
 

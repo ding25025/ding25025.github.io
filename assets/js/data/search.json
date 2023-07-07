@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Upgrade Apache2 version in Ubuntu 18.0.4",
+    "url": "/posts/upgrade-Apache2-version/",
+    "categories": "Blogging, Tutorial",
+    "tags": "Apache2, Ubuntu 18.04, Cybersecurity",
+    "date": "2023-07-07 12:02:00 +0800",
+    
+
+
+
+
+
+    "snippet": "IntroductionThere are some cybersecutriy problem, so we need to uprade Apache2 version.When upgrading Apache, it is important to check for any potential issues with rewrite rules.CVE-2023-25690  Origin Version: Apache/2.4.54  Upgrade Version: Apache/2.4.57The Apache2 vulerabilities as follows:  CVE-2023-25690 (Prior to Apache HTTP Server 2.4.55)  CVE-2022-37436 (Prior to Apache HTTP Server 2.4.55)  CVE-2022-36760 (Prior to Apache HTTP Server 2.4.54)  CVE-2006-20001 (Prior to Apache HTTP Server 2.4.54)  CVE-2023-27522 (Prior to Apache HTTP Server 2.4.55)Steps  Download the Apache2 lastest version      sudo add-apt-repository ppa:ondrej/apache2 -y &amp;&amp; sudo apt update            Start install apache2    sudo apt install apache2                Then, it will ask you some questions, such as follows exampleConfiguration file ‘/etc/apache2/apache2.conf’ ==&gt; Modified (by you or by a script) since installation. ==&gt; Package distributor has shipped an updated version.What would you like to do about it ?  Your options are: Y or I  : install the package maintainer’s version N or O  : keep your currently-installed version   D     : show the differences between the versions   Z     : start a shell to examine the situation The default action is to keep your current version.*** apache2.conf (Y/I/N/O/D/Z) [default=N] ? Y    Check Apche2 version    apache2 -v          ReferenceUbuntu：將 Apache 更新到最新版"
+  },
+  
+  {
     "title": "快速導入2FA驗證：使用Google Authentication",
     "url": "/posts/google-2FA/",
     "categories": "Blogging, Tutorial",
