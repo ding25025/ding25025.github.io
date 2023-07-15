@@ -1,8 +1,23 @@
 [
   
   {
+    "title": "如何一次考取四張Azure基礎證照",
+    "url": "/posts/azure-certified/",
+    "categories": "Blogging, Azure",
+    "tags": "Azure, AI900, AZ900, DP900, SC900",
+    "date": "2023-07-15 16:25:00 +0800",
+    
+
+
+
+
+
+    "snippet": "背景介紹由於工作的關係，會接觸到Azure服務，決定來考一下證照，不過考取證照完，只是了解一些基礎的觀念，實作當然就是另外一回事了。因為考證照需要付錢，於是上網查詢如何免費考照，只要有上過 Microsoft Azure 虛擬培訓日的課程，就會給一組優惠代碼可以折抵考試費用，期限是三個月到期，建議可以先預約要考的日期，假設我是2023-5-31到期，可以先預約2023-6-10的考試，這樣就還有免費考照的優惠，所以就趕緊把基礎證照拿到手，除此之外，證照考取失敗還可以重考，請參考官網說明。對了，如果是進階的證照並不適用這個優惠代碼。如何準備及報考心得Azure真是很佛心，也有專門的教學網站，四張證照都是看官網內容，並且看一下考古題，就可以考過啦！接下來，在這邊簡單介紹，我是如何準備的～首先，先看一下考試大綱，每張證照預計準備兩週到一個月，我是每天看一些章節(1~2hr)，看到差不多70%~80%的進度後，就先看一下考古題，看一下自己哪個部分最不清楚，再重新複習那個部分的觀念。除此之外，微軟官網也有提供免費的測驗，測驗完後，會知道哪個部分最弱，並建議你要加強的單元，可以把它存起來，後續再找時間閱讀這些單元。雖然微軟的免費測驗題目跟考試的範圍會有些落差(題目比較深)，的確是如此，而且，大部分考題還是從考古題出來，但基本觀念還是可以從微軟免費的測驗來學習，因為會有一些名詞定義，順便加強一下英文閱讀能力。我的考照順序如下，大部分的人都會建議先考AZ-900，因為後面幾張證照會出現跟AZ900有相關的概念，AI900的內容較獨立，就算只單獨準備這張證照，我覺得也可以。  二月底 AZ900  五月初 AI900  五月底 DP900  六月初 SC900第一次我是去考照單位考試，後來就都在線上考試了，因為比較方便，但要注意網路問題。有一次考試，差點因網路問題要重考，真的很緊張。如何預約考試，請參照網址證照出爐  AZ900  AI900  DP900  SC900學習資源Azure學習官網考古題官網"
+  },
+  
+  {
     "title": "Upgrade Apache2 version in Ubuntu 18.0.4",
-    "url": "/posts/upgrade-Apache2-version/",
+    "url": "/posts/upgrade-Apache2-version-copy/",
     "categories": "Blogging, Tutorial",
     "tags": "Apache2, Ubuntu 18.04, Cybersecurity",
     "date": "2023-07-07 12:02:00 +0800",
@@ -12,7 +27,7 @@
 
 
 
-    "snippet": "IntroductionThere are some cybersecutriy problem, so we need to uprade Apache2 version.When upgrading Apache, it is important to check for any potential issues with rewrite rules.CVE-2023-25690  Origin Version: Apache/2.4.54  Upgrade Version: Apache/2.4.57The Apache2 vulerabilities as follows:  CVE-2023-25690 (Prior to Apache HTTP Server 2.4.55)  CVE-2022-37436 (Prior to Apache HTTP Server 2.4.55)  CVE-2022-36760 (Prior to Apache HTTP Server 2.4.54)  CVE-2006-20001 (Prior to Apache HTTP Server 2.4.54)  CVE-2023-27522 (Prior to Apache HTTP Server 2.4.55)Steps  Download the Apache2 lastest version      sudo add-apt-repository ppa:ondrej/apache2 -y &amp;&amp; sudo apt update            Start install apache2    sudo apt install apache2                Then, it will ask you some questions, such as follows exampleConfiguration file ‘/etc/apache2/apache2.conf’ ==&gt; Modified (by you or by a script) since installation. ==&gt; Package distributor has shipped an updated version.What would you like to do about it ?  Your options are: Y or I  : install the package maintainer’s version N or O  : keep your currently-installed version   D     : show the differences between the versions   Z     : start a shell to examine the situation The default action is to keep your current version.*** apache2.conf (Y/I/N/O/D/Z) [default=N] ? Y    Check Apche2 version    apache2 -v          ReferenceUbuntu：將 Apache 更新到最新版"
+    "snippet": "IntroductionThere are some cybersecutriy problem, so we need to uprade Apache2 version.When upgrading Apache, it is important to check for any potential issues with rewrite rules.CVE-2023-25690  Origin Version: Apache/2.4.54  Upgrade Version: Apache/2.4.57The Apache2 vulerabilities as follows:  CVE-2023-25690 (Prior to Apache HTTP Server 2.4.55)  CVE-2022-37436 (Prior to Apache HTTP Server 2.4.55)  CVE-2022-36760 (Prior to Apache HTTP Server 2.4.54)  CVE-2006-20001 (Prior to Apache HTTP Server 2.4.54)  CVE-2023-27522 (Prior to Apache HTTP Server 2.4.55)Steps  Download the Apache2 lastest version      sudo add-apt-repository ppa:ondrej/apache2 -y &amp;&amp; sudo apt update            Start install apache2    sudo apt install apache2            Then, it will ask you some questions, such as follows example.     Configuration file '/etc/apache2/apache2.conf'  ==&gt; Modified (by you or by a script) since installation.  ==&gt; Package distributor has shipped an updated version. What would you like to do about it ?  Your options are:   Y or I  : install the package maintainer's version   N or O  : keep your currently-installed version     D     : show the differences between the versions     Z     : start a shell to examine the situation  The default action is to keep your current version.  *** apache2.conf (Y/I/N/O/D/Z) [default=N] ? Y        Check Apche2 version    apache2 -v          ReferenceUbuntu：將 Apache 更新到最新版"
   },
   
   {

@@ -4,7 +4,7 @@
   <id>http://localhost:4000/</id>
   <title>YT BLOG</title>
   <subtitle>No matter how hard it is, you need to step by step and practice, until you got it.</subtitle>
-  <updated>2023-07-07T13:17:03+08:00</updated>
+  <updated>2023-07-15T16:27:21+08:00</updated>
   <author>
     <name>YU-TING,WU</name>
     <uri>http://localhost:4000/</uri>
@@ -20,14 +20,59 @@
 
   
   <entry>
+    <title>如何一次考取四張Azure基礎證照</title>
+    <link href="http://localhost:4000/posts/azure-certified/" rel="alternate" type="text/html" title="如何一次考取四張Azure基礎證照" />
+    <published>2023-07-15T16:25:00+08:00</published>
+  
+    <updated>2023-07-15T16:25:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/azure-certified/</id>
+    <content src="http://localhost:4000/posts/azure-certified/" />
+    <author>
+      <name>YuTing Wu</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Azure" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      背景介紹
+由於工作的關係，會接觸到Azure服務，決定來考一下證照，不過考取證照完，只是了解一些基礎的觀念，實作當然就是另外一回事了。
+
+因為考證照需要付錢，於是上網查詢如何免費考照，只要有上過 Microsoft Azure 虛擬培訓日的課程，就會給一組優惠代碼可以折抵考試費用，期限是三個月到期，建議可以先預約要考的日期，假設我是2023-5-31到期，可以先預約2023-6-10的考試，這樣就還有免費考照的優惠，所以就趕緊把基礎證照拿到手，除此之外，證照考取失敗還可以重考，請參考官網說明。對了，如果是進階的證照並不適用這個優惠代碼。
+
+如何準備及報考心得
+Azure真是很佛心，也有專門的教學網站，四張證照都是看官網內容，並且看一下考古題，就可以考過啦！
+接下來，在這邊簡單介紹，我是如何準備的～
+
+首先，先看一下考試大綱，每張證照預計準備兩週到一個月，我是每天看一些章節(1~2hr...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>Upgrade Apache2 version in Ubuntu 18.0.4</title>
-    <link href="http://localhost:4000/posts/upgrade-Apache2-version/" rel="alternate" type="text/html" title="Upgrade Apache2 version in Ubuntu 18.0.4" />
+    <link href="http://localhost:4000/posts/upgrade-Apache2-version-copy/" rel="alternate" type="text/html" title="Upgrade Apache2 version in Ubuntu 18.0.4" />
     <published>2023-07-07T12:02:00+08:00</published>
   
     <updated>2023-07-07T12:02:00+08:00</updated>
   
-    <id>http://localhost:4000/posts/upgrade-Apache2-version/</id>
-    <content src="http://localhost:4000/posts/upgrade-Apache2-version/" />
+    <id>http://localhost:4000/posts/upgrade-Apache2-version-copy/</id>
+    <content src="http://localhost:4000/posts/upgrade-Apache2-version-copy/" />
     <author>
       <name>YuTing Wu</name>
     </author>
@@ -195,54 +240,6 @@ Create GA account a...
 Generate the favicon
 
 Prepare a square image (PNG, JPG, or SVG) with a size of 512x512 or more, and then go to the online tool Real Favicon Generator and click the button Select your Favicon image ...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Getting Started</title>
-    <link href="http://localhost:4000/posts/getting-started/" rel="alternate" type="text/html" title="Getting Started" />
-    <published>2019-08-09T20:55:00+08:00</published>
-  
-    <updated>2019-08-09T20:55:00+08:00</updated>
-  
-    <id>http://localhost:4000/posts/getting-started/</id>
-    <content src="http://localhost:4000/posts/getting-started/" />
-    <author>
-      <name>cotes</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Prerequisites
-
-Follow the instructions in the Jekyll Docs to complete the installation of Ruby, RubyGems, Jekyll, and Bundler. In addition, Git is also required to be installed.
-
-Installation
-
-Creating a New Site
-
-There are two ways to create a new repository for this theme:
-
-
-  Using the Chirpy Starter - Easy to upgrade, isolates irrelevant project files so you can focus on writing.
-  Forking ...
     </summary>
   
 
