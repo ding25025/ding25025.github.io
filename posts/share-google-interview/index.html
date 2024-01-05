@@ -57,25 +57,25 @@
   
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Upgrade Apache2 version in Ubuntu 18.0.4" />
+<meta property="og:title" content="Google面試經驗分享" />
 <meta name="author" content="YuTing Wu" />
 <meta property="og:locale" content="zh_TW" />
-<meta name="description" content="Introduction There are some cybersecutriy problem, so we need to uprade Apache2 version. When upgrading Apache, it is important to check for any potential issues with rewrite rules.CVE-2023-25690" />
-<meta property="og:description" content="Introduction There are some cybersecutriy problem, so we need to uprade Apache2 version. When upgrading Apache, it is important to check for any potential issues with rewrite rules.CVE-2023-25690" />
-<link rel="canonical" href="http://localhost:4000/posts/upgrade-Apache2-version-copy/" />
-<meta property="og:url" content="http://localhost:4000/posts/upgrade-Apache2-version-copy/" />
+<meta name="description" content="個人背景介紹 網路上已經有非常多的Google面試分享，在此紀錄自己的面試經驗。 約10年工作經驗，曾經待過不同類型的公司(從不到十人到萬人)，無論是前端還是後端都會寫一些，但是都不深入，感覺好像是一直在打雜的工程師，但沒有想到有這個面試機會，而且資料結構跟演算法早就還給老師了，時間複雜度也搞不太清楚，重新刷Code才慢慢了解。" />
+<meta property="og:description" content="個人背景介紹 網路上已經有非常多的Google面試分享，在此紀錄自己的面試經驗。 約10年工作經驗，曾經待過不同類型的公司(從不到十人到萬人)，無論是前端還是後端都會寫一些，但是都不深入，感覺好像是一直在打雜的工程師，但沒有想到有這個面試機會，而且資料結構跟演算法早就還給老師了，時間複雜度也搞不太清楚，重新刷Code才慢慢了解。" />
+<link rel="canonical" href="http://localhost:4000/posts/share-google-interview/" />
+<meta property="og:url" content="http://localhost:4000/posts/share-google-interview/" />
 <meta property="og:site_name" content="YT BLOG" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-07-07T12:02:00+08:00" />
+<meta property="article:published_time" content="2024-01-05T18:06:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Upgrade Apache2 version in Ubuntu 18.0.4" />
+<meta property="twitter:title" content="Google面試經驗分享" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"YuTing Wu"},"dateModified":"2023-07-07T12:02:00+08:00","datePublished":"2023-07-07T12:02:00+08:00","description":"Introduction There are some cybersecutriy problem, so we need to uprade Apache2 version. When upgrading Apache, it is important to check for any potential issues with rewrite rules.CVE-2023-25690","headline":"Upgrade Apache2 version in Ubuntu 18.0.4","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/upgrade-Apache2-version-copy/"},"url":"http://localhost:4000/posts/upgrade-Apache2-version-copy/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"YuTing Wu"},"dateModified":"2024-01-05T18:06:00+08:00","datePublished":"2024-01-05T18:06:00+08:00","description":"個人背景介紹 網路上已經有非常多的Google面試分享，在此紀錄自己的面試經驗。 約10年工作經驗，曾經待過不同類型的公司(從不到十人到萬人)，無論是前端還是後端都會寫一些，但是都不深入，感覺好像是一直在打雜的工程師，但沒有想到有這個面試機會，而且資料結構跟演算法早就還給老師了，時間複雜度也搞不太清楚，重新刷Code才慢慢了解。","headline":"Google面試經驗分享","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/posts/share-google-interview/"},"url":"http://localhost:4000/posts/share-google-interview/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>Upgrade Apache2 version in Ubuntu 18.0.4 | YT BLOG </title>
+  <title>Google面試經驗分享 | YT BLOG </title>
 
   <!--
   The Favicons for Web, Android, Microsoft, and iOS (iPhone and iPad) Apps
@@ -421,7 +421,7 @@
         
 
           
-            <span>Upgrade Apache2 version in Ubuntu 18.0.4</span>
+            <span>Google面試經驗分享</span>
           
 
         
@@ -504,212 +504,6 @@
 
 
 
-  
-  
-
-  
-    
-      
-      
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-    
-
-    
-    
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-      
-      
-
-      
-      
-
-      
-
-      
-    
-
-    
-      
-
-        <!-- Add CDN URL -->
-        
-
-        <!-- Add image path -->
-        
-
-        
-        
-
-      
-
-      <!-- lazy-load images <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-
-      
-
-    
-
-    <!-- Add SVG placehoder to prevent layout reflow -->
-
-    
-
-    <!-- Bypass the HTML-proofer test -->
-    
-
-    
-
-  
-
-  
-
-
 
 <!-- Add header for code snippets -->
 
@@ -744,58 +538,6 @@
       
 
     
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-
-    
-
-  
-
-  
-  
-
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
-      
-
-      
-      
-
-      
-      
-      
-
-      
-
-    
 
     
 
@@ -826,6 +568,11 @@
     
 
     
+
+  
+
+  
+  
 
   
 
@@ -851,7 +598,7 @@
 
 
 
-<h1 data-toc-skip>Upgrade Apache2 version in Ubuntu 18.0.4</h1>
+<h1 data-toc-skip>Google面試經驗分享</h1>
 
 <div class="post-meta text-muted">
   <!-- published date -->
@@ -867,10 +614,10 @@
 
 
 <em class=""
-    data-ts="1688702520"
+    data-ts="1704449160"
     data-df="ll"
     data-toggle="tooltip" data-placement="bottom">
-  Jul  7, 2023
+  Jan  5, 2024
 </em>
 
   </span>
@@ -921,8 +668,8 @@
 
 <!-- return element -->
 <span class="readtime" data-toggle="tooltip" data-placement="bottom"
-  title="216 words">
-  <em>1 min</em> read</span>
+  title="955 words">
+  <em>5 min</em> read</span>
 
     </div>
 
@@ -931,82 +678,37 @@
 </div> <!-- .post-meta -->
 
 <div class="post-content">
-  <h2 id="introduction"><span class="mr-2">Introduction</span><a href="#introduction" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>There are some cybersecutriy problem, so we need to uprade Apache2 version.
-When upgrading Apache, it is important to check for any potential issues with rewrite rules.<a href="https://github.com/dhmosfunk/CVE-2023-25690-POC">CVE-2023-25690</a></p>
+  <h2 id="個人背景介紹"><span class="mr-2">個人背景介紹</span><a href="#個人背景介紹" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+<p>網路上已經有非常多的Google面試分享，在此紀錄自己的面試經驗。
+約10年工作經驗，曾經待過不同類型的公司(從不到十人到萬人)，無論是前端還是後端都會寫一些，但是都不深入，感覺好像是一直在打雜的工程師，但沒有想到有這個面試機會，而且資料結構跟演算法早就還給老師了，時間複雜度也搞不太清楚，重新刷Code才慢慢了解。</p>
 
-<blockquote>
-  <p>Origin Version: Apache/2.4.54</p>
-
-  <p>Upgrade Version: Apache/2.4.57</p>
-</blockquote>
-
-<h3 id="the-apache2-vulerabilities-as-follows"><span class="mr-2">The Apache2 vulerabilities as follows:</span><a href="#the-apache2-vulerabilities-as-follows" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+<h3 id="面試過程與時間"><span class="mr-2">面試過程與時間</span><a href="#面試過程與時間" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 <ul>
-  <li>CVE-2023-25690 (Prior to Apache HTTP Server 2.4.55)</li>
-  <li>CVE-2022-37436 (Prior to Apache HTTP Server 2.4.55)</li>
-  <li>CVE-2022-36760 (Prior to Apache HTTP Server 2.4.54)</li>
-  <li>CVE-2006-20001 (Prior to Apache HTTP Server 2.4.54)</li>
-  <li>CVE-2023-27522 (Prior to Apache HTTP Server 2.4.55)</li>
+  <li>
+    <p>2023/10月初：於官網投遞Google Cloud Platform的職缺，隔幾天就收到來自中國HR 的小姐來信，並提供相關面試準備資訊。因為我真的很少刷code，所以建議我先花時間準備，並先安排兩個月後的面試。</p>
+  </li>
+  <li>
+    <p>2023/10/26 HR 初步篩選：會先了解您過去的背景，是否與他們要的人符合。</p>
+  </li>
+  <li>
+    <p>2023/11/21 HR 快問快答：先了解您的資料結構還有演算法基本知識，過程中後續轉換英文詢問，但後來切回中文問，因為聽不懂他的問題，好慘！雖然有幾題回答錯誤，但還是有進行下個階段的面試，於是HR就詢問要不要先安排模擬面試，並說明這個面試不算面試結果，所以就欣然接受，難得可以有練習的機會。</p>
+  </li>
+  <li>
+    <p>2023/11/30 Google Mock Interview (中文): 面試官是來自其他部門的Googler，是做AI領域的，面試過程中會與你互動，結束後，告知您要改進的部分，建議我多做一些模擬面試，要先想清楚再開始實作。</p>
+  </li>
+  <li>
+    <p>2023/12/6 第一次正式Phone Interview(中文):結果正式面試前，原本的HR小姐竟然某些原因要離開，所以換了另一位中國的HR小姐，實在是沒想到，感覺Google好多部門都外包。</p>
+  </li>
+  <li>
+    <p>首先，面試當天會需要開啟視訊，接下來，面試官會請您分享您的桌面，並且打開信件中的面試連結，打開後是一份共享文件，您會在此文件跟面試官互動並撰寫程式，這場面試官非常年輕，我先確認完題目後，發現題目不像LeetCode上面的描述，可能是實際要解決的問題(題目難度應該是Easy)，於是我重新敘述一次要解決的問題，並且於面試官確認，然後就開始寫，但是似乎我沒有問到一些要釐清的問題，所以解題方向還是錯誤，過程中，面試官還會誤導你時間複雜度有沒有可能是XX，所以要注意這個部分，整個過程中算中規中矩，面試官人很友善，並詢問您是否有問題。</p>
+  </li>
+  <li>
+    <p>2023/12/8 跟HR預約時間，了解面試結果</p>
+  </li>
+  <li>
+    <p>2023/12/12 Phone Interview 面試結果：Fail，HR小姐會詢問您的面試過程，並瞭解是哪個部分出問題，告知您面試官的回饋：似乎是我理解錯題目方向，沒有問需要確認的問題，就開始寫了，聽起來很糟糕，但是關於時間複雜度的部分，認為我的觀念非常清楚。面試完，突然間會覺得自己適合寫程式嗎？是不是應該要轉行，XD。於是，HR 詢問是否要再進行一次Phone Interview面試？</p>
+  </li>
 </ul>
-
-<h3 id="steps"><span class="mr-2">Steps</span><a href="#steps" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
-
-<ol>
-  <li>Download the Apache2 lastest version
-    <div class="language-shell highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>  <span class="nb">sudo </span>add-apt-repository ppa:ondrej/apache2 <span class="nt">-y</span> <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt update
-</pre></td></tr></tbody></table></code></div>    </div>
-    <p><img data-src="https://ytmind.files.wordpress.com/2023/06/apache2-up1.png?w=948" width="100%" data-proofer-ignore></p>
-  </li>
-  <li>Start install apache2
-    <div class="language-shell highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt <span class="nb">install </span>apache2
-</pre></td></tr></tbody></table></code></div>    </div>
-    <p><img data-src="https://ytmind.files.wordpress.com/2023/06/apache2-up2.png?w=946" width="100%" data-proofer-ignore></p>
-  </li>
-  <li>Then, it will ask you some questions, such as follows example.
-    <div class="language-plaintext highlighter-rouge"><div class="code-header">
-        <span data-label-text="Plaintext"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-</pre></td><td class="rouge-code"><pre> Configuration file '/etc/apache2/apache2.conf'
-  ==&gt; Modified (by you or by a script) since installation.
-  ==&gt; Package distributor has shipped an updated version.
- What would you like to do about it ?  Your options are:
-   Y or I  : install the package maintainer's version
-   N or O  : keep your currently-installed version
-     D     : show the differences between the versions
-     Z     : start a shell to examine the situation
-  The default action is to keep your current version.
-  *** apache2.conf (Y/I/N/O/D/Z) [default=N] ? Y
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>Check Apche2 version
-    <div class="language-shell highlighter-rouge"><div class="code-header">
-        <span data-label-text="Shell"><i class="fas fa-code small"></i></span>
-      <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>apache2 <span class="nt">-v</span>
-</pre></td></tr></tbody></table></code></div>    </div>
-    <p><img data-src="https://ytmind.files.wordpress.com/2023/06/e688aae59c96-2023-06-07-e4b88be58d884.14.39-1.png?w=301" width="60%" data-proofer-ignore></p>
-  </li>
-</ol>
-
-<h2 id="reference"><span class="mr-2">Reference</span><a href="#reference" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-
-<h4 id="ubuntu將-apache-更新到最新版"><span class="mr-2"><a href="https://mnya.tw/cc/word/1763.html" target="_blank"><span class="mr-2">Ubuntu：將 Apache 更新到最新版</a></span><a href="#ubuntu將-apache-更新到最新版" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
 
 
 </div>
@@ -1019,7 +721,8 @@ When upgrading Apache, it is important to check for any potential issues with re
     <i class="far fa-folder-open fa-fw mr-1"></i>
     
     <a href='/categories/blogging/'>Blogging</a>,
-    <a href='/categories/tutorial/'>Tutorial</a>
+    <a href='/categories/google/'>Google</a>,
+    <a href='/categories/interview/'>Interview</a>
   </div>
   
 
@@ -1028,11 +731,9 @@ When upgrading Apache, it is important to check for any potential issues with re
   <div class="post-tags">
     <i class="fa fa-tags fa-fw mr-1"></i>
     
-    <a href="/tags/apache2/" class="post-tag no-text-decoration">Apache2</a>
+    <a href="/tags/google/" class="post-tag no-text-decoration">Google</a>
     
-    <a href="/tags/ubuntu-18-04/" class="post-tag no-text-decoration">Ubuntu 18.04</a>
-    
-    <a href="/tags/cybersecurity/" class="post-tag no-text-decoration">Cybersecurity</a>
+    <a href="/tags/interview/" class="post-tag no-text-decoration">Interview</a>
     
   </div>
   
@@ -1067,13 +768,13 @@ When upgrading Apache, it is important to check for any potential issues with re
 
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Upgrade+Apache2+version+in+Ubuntu+18.0.4+-+YT+BLOG&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fupgrade-Apache2-version-copy%2F" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Google%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB+-+YT+BLOG&u=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fshare-google-interview%2F" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fupgrade-Apache2-version-copy%2F&text=Upgrade+Apache2+version+in+Ubuntu+18.0.4+-+YT+BLOG" data-toggle="tooltip" data-placement="top"
+        <a href="https://t.me/share/url?url=http%3A%2F%2Flocalhost%3A4000%2Fposts%2Fshare-google-interview%2F&text=Google%E9%9D%A2%E8%A9%A6%E7%B6%93%E9%A9%97%E5%88%86%E4%BA%AB+-+YT+BLOG" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1634,20 +1335,33 @@ When upgrading Apache, it is important to check for any potential issues with re
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1746,6 +1460,52 @@ When upgrading Apache, it is important to check for any potential issues with re
       
       
       <div class="card">
+        <a href="/posts/text-and-typography/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+
+<em class="small"
+    data-ts="1565235180"
+    data-df="ll"
+    >
+  Aug  8, 2019
+</em>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Text and Typography</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                This post is to show Markdown syntax rendering on Chirpy, you can also use it as an example of writing. Now, let’s start looking at text and typography.
+
+Titles
+
+
+H1 - heading
+
+H2 - heading
+
+H3 - h...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
         <a href="/posts/write-a-new-post/">
           <div class="card-body">
             <!--
@@ -1823,43 +1583,6 @@ Crea...
         </a>
       </div>
     
-      
-      
-      <div class="card">
-        <a href="/posts/customize-the-favicon/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-  See: ${JS_ROOT}/utils/locale-dateime.js
--->
-
-
-
-
-
-<em class="small"
-    data-ts="1565454840"
-    data-df="ll"
-    >
-  Aug 11, 2019
-</em>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Customize the Favicon</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                The favicons of Chirpy are placed in the directory assets/img/favicons/. You may want to replace them with your own. The following sections will guide you to create and replace the default favicons...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
     </div> <!-- .card-deck -->
   </div> <!-- #related-posts -->
 
@@ -1872,17 +1595,17 @@ Crea...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/google-2FA/" class="btn btn-outline-primary"
+  <a href="/posts/azure-certified/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>快速導入2FA驗證：使用Google Authentication</p>
+    <p>如何一次考取四張Azure基礎證照</p>
   </a>
   
 
   
-  <a href="/posts/azure-certified/" class="btn btn-outline-primary"
+  <div class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>如何一次考取四張Azure基礎證照</p>
-  </a>
+    <p>-</p>
+  </div>
   
 
 </div>
@@ -1904,7 +1627,7 @@ Crea...
   <div class="col-12 d-flex justify-content-between align-items-center text-muted pl-0 pr-0">
     <div class="footer-left">
       <p class="mb-0">
-        © 2023
+        © 2024
         <a href="https://github.com/ding25025">YU-TING,WU</a>.
         
         <span data-toggle="tooltip" data-placement="top"
